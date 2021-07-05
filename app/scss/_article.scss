@@ -1,0 +1,52 @@
+.article {
+  background-color: $veryLightGray;
+  &__content {
+  }
+  &__grid {
+    display: grid;
+    gap: 1.85rem;
+    @include breakpoint-up(medium) {
+      grid-template-columns: repeat(2, 1fr);
+    }
+    @include breakpoint-up(large) {
+      grid-template-columns: repeat(4, 1fr);
+    }
+  }
+  &__item {
+    border-radius: 0.3125rem;
+    overflow: hidden;
+    background-color: $white;
+    box-shadow: 0 3px 12px rgba($color: #000000, $alpha: 0.15);
+    transition: transform 150ms ease-in-out;
+    &:hover {
+      transform: scale(1.05);
+    }
+  }
+  &__image {
+    height: 12.5rem;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+  }
+  &__text {
+    padding: 1.875rem 1.875rem 2.5rem 1.875rem;
+    color: $grayishBlue;
+
+    @include breakpoint-up(medium) {
+      padding: 1.875rem 1.5625rem;
+    }
+  }
+  &__author {
+    font-size: 0.625rem;
+    margin-bottom: 0.75rem;
+  }
+  &__title {
+    line-height: 1.2;
+    font-size: 1.0625rem;
+    color: $darkBlue;
+    margin-bottom: 0.5rem;
+  }
+  &__description {
+    font-size: 0.8125rem;
+  }
+}
