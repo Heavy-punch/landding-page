@@ -208,6 +208,11 @@ button:hover::before,
   padding-left: 1.5rem;
 }
 
+.header {
+  position: relative;
+  z-index: 1;
+}
+
 .header__menu {
   background: white;
   padding: 1.625rem;
@@ -327,6 +332,7 @@ button:hover::before,
     opacity: 0;
   }
   to {
+    visibility: visible;
     opacity: 1;
   }
 }
@@ -341,6 +347,7 @@ button:hover::before,
     opacity: 0;
   }
   to {
+    visibility: visible;
     opacity: 1;
   }
 }
